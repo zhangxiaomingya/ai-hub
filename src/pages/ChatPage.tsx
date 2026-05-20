@@ -29,11 +29,11 @@ async function callPollinationsAI(messages: { role: string; content: string }[])
 
 请用中文回答，回答要专业、实用、有条理。适当使用 Markdown 格式（**加粗**、列表等）让内容更清晰。`
 
-  const response = await fetch('https://text.pollinations.ai/openai', {
+  const response = await fetch('https://text.pollinations.ai/v1/chat/completions', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model: 'openai-large',
+      model: 'openai',
       messages: [
         { role: 'system', content: systemPrompt },
         ...messages,
