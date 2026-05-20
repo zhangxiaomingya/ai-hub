@@ -1,0 +1,149 @@
+{
+  "updatedAt": "2026-05-20T06:01:57.614Z",
+  "items": [
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Google just declared itself a contender in AI design at IO 2026",
+      "summary": "Google says it's designed the app to be accessible to everyone, from teachers to small business owners.",
+      "url": "https://techcrunch.com/2026/05/19/ai-design-tools-are-the-next-big-battleground-and-google-is-going-all-in-at-io-2026/",
+      "date": "2026-05-19",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "You can now talk to your Gmail inbox, as seen at Google IO 2026",
+      "summary": "Google expands Gmail’s AI Inbox with conversational voice search, letting users ask Gemini to find buried email details.",
+      "url": "https://techcrunch.com/2026/05/19/you-can-now-talk-to-your-gmail-inbox-as-seen-at-google-io-2026/",
+      "date": "2026-05-19",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "How to use Google’s new AI agents to go beyond your standard searches",
+      "summary": "Google is launching AI-powered “information agents” that can monitor topics in the background and proactively alert users to updates and changes.",
+      "url": "https://techcrunch.com/2026/05/19/how-to-use-googles-new-ai-agents-to-go-beyond-your-standard-searches/",
+      "date": "2026-05-19",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "From teen hacker to Iron Dome researcher, this founder raised $28M to fight AI phishing",
+      "summary": "Ocean, an agentic email security platform, claims its AI can thoroughly analyze the context of every incoming email to detect fraud and impersonation attempts.",
+      "url": "https://techcrunch.com/2026/05/19/from-teen-hacker-to-iron-dome-researcher-this-founder-raised-28m-to-fight-ai-phishing/",
+      "date": "2026-05-19",
+      "category": "company",
+      "source": "TechCrunch AI",
+      "isHot": false,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Elon Musk said Sam Altman &#8216;stole&#8217; a non-profit — but the trial showed he had similar aims",
+      "summary": "The jury's speedy decision to reject Elon Musk's lawsuit against the other founders of OpenAI and Microsoft confirmed what we saw in the courtroom: Musk's case was a weak one, in part because he waite",
+      "url": "https://techcrunch.com/2026/05/19/elon-musk-said-sam-altman-stole-a-non-profit-but-the-trial-showed-he-had-similar-aims/",
+      "date": "2026-05-19",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": false,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Google takes a page out of Meta&#8217;s book, announces new audio-powered smart glasses at IO 2026",
+      "summary": "Google is calling the new devices \"audio glasses,\" in that users will be able to issue verbal commands to them and get things done via its ecosystem of apps and services, including Gemini.",
+      "url": "https://techcrunch.com/2026/05/19/google-takes-a-page-out-of-metas-book-announces-new-audio-powered-smart-glasses-at-io-2026/",
+      "date": "2026-05-19",
+      "category": "product",
+      "source": "TechCrunch AI",
+      "isHot": false,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly93",
+      "title": "Here’s why Elon Musk lost his suit against OpenAI",
+      "summary": "On Monday, the jury in Musk v. Altman dealt Elon Musk a major blow—reaching a unanimous advisory verdict that he had sued OpenAI too late and, as a result, his claims are barred by the applicable stat",
+      "url": "https://www.technologyreview.com/2026/05/18/1137488/elon-musk-suit-openai-verdict/",
+      "date": "2026-05-19",
+      "category": "news",
+      "source": "MIT Tech Review",
+      "isHot": false,
+      "company": "MIT TR",
+      "companyColor": "#8B5CF6"
+    },
+    {
+      "id": "aHR0cHM6Ly93",
+      "title": "What to expect from Google this week",
+      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. When Google opens its doors tomorrow for its annual developer ",
+      "url": "https://www.technologyreview.com/2026/05/18/1137439/what-to-expect-from-google-this-week/",
+      "date": "2026-05-18",
+      "category": "news",
+      "source": "MIT Tech Review",
+      "isHot": false,
+      "company": "MIT TR",
+      "companyColor": "#8B5CF6"
+    },
+    {
+      "id": "aHR0cHM6Ly93",
+      "title": "Inside Anduril and Meta’s quest to make smart glasses for warfare",
+      "summary": "The defense-tech company Anduril has shared new details about the augmented-reality headset for the military it’s prototyping with Meta, including a vision for ordering drone strikes via eye-tracking ",
+      "url": "https://www.technologyreview.com/2026/05/18/1137412/inside-anduril-and-metas-quest-to-make-smart-glasses-for-warfare/",
+      "date": "2026-05-18",
+      "category": "news",
+      "source": "MIT Tech Review",
+      "isHot": false,
+      "company": "MIT TR",
+      "companyColor": "#8B5CF6"
+    },
+    {
+      "id": "aHR0cHM6Ly93",
+      "title": "Musk v. Altman week 3: Elon Musk and Sam Altman traded blows over each other’s credibility. Now the jury will pick a side.",
+      "summary": "Update: On Monday May 18, the jury sided with OpenAI, delivering an advisory verdict finding that Musk&#8217;s claims are barred by the statute of limitations. US District Judge Yvonne Gonzalez Rogers",
+      "url": "https://www.technologyreview.com/2026/05/15/1137357/musk-v-altman-week-3/",
+      "date": "2026-05-15",
+      "category": "news",
+      "source": "MIT Tech Review",
+      "isHot": false,
+      "company": "MIT TR",
+      "companyColor": "#8B5CF6"
+    },
+    {
+      "id": "aHR0cHM6Ly93",
+      "title": "How Chinese short dramas became AI content machines",
+      "summary": "In a dimly lit bedroom, a frightened young woman is thrown onto a bed by a tall, muscular man. He grabs her hand, and flame-like vines crawl across her body, fusing with her flesh. She levitates, then",
+      "url": "https://www.technologyreview.com/2026/05/15/1137326/chinese-short-dramas-ai/",
+      "date": "2026-05-15",
+      "category": "news",
+      "source": "MIT Tech Review",
+      "isHot": false,
+      "company": "MIT TR",
+      "companyColor": "#8B5CF6"
+    },
+    {
+      "id": "aHR0cHM6Ly93",
+      "title": "Data readiness for agentic AI in financial services",
+      "summary": "Financial services companies have unique needs when it comes to business AI. They operate in one of the most highly regulated sectors while responding to external events that are updated by the second",
+      "url": "https://www.technologyreview.com/2026/05/14/1137034/data-readiness-for-agentic-ai-in-financial-services/",
+      "date": "2026-05-14",
+      "category": "news",
+      "source": "MIT Tech Review",
+      "isHot": false,
+      "company": "MIT TR",
+      "companyColor": "#8B5CF6"
+    }
+  ]
+}

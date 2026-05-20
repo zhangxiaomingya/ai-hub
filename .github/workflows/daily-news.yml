@@ -1,0 +1,68 @@
+name: Daily News Update
+
+on:
+  schedule:
+    # 每天北京时间 8:00 (UTC 0:00) 自动运行
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 允许手动触发
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch latest AI news
+        run: node scripts/fetch-news.cjs
+
+      - name: Check if news.json changed
+        id: check
+        run: |
+          if git diff --quiet public/news.json 2>/dev/null || [ ! -f public/news.json ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit updated news
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/news.json
+          git diff --staged --quiet || git commit -m "chore: auto-update AI news [$(date +'%Y-%m-%d')]"
+          git push
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: update-news
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

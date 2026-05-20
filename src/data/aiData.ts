@@ -2,13 +2,15 @@
 export interface NewsItem {
   id: string
   date: string
-  category: 'model' | 'company' | 'research' | 'product'
+  category: 'model' | 'company' | 'research' | 'product' | 'news'
   title: string
   summary: string
   company: string
   companyColor: string
   isHot?: boolean
   tags: string[]
+  url?: string
+  source?: string
 }
 
 export const newsData: NewsItem[] = [

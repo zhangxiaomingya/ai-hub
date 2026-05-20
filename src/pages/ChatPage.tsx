@@ -11,81 +11,106 @@ interface Message {
 }
 
 const QUICK_QUESTIONS = [
-  '目前最强的代码生成模型是什么？',
+  '目前最强的代码生成模型是哪个？',
   '如何选择适合我的 AI 绘图工具？',
-  'GPT-4o 和 Claude 3.5 有什么区别？',
+  'GPT-4o 和 Claude 有什么区别？',
   '什么是 AI Agent？有哪些应用场景？',
   'Prompt 工程有哪些最佳实践？',
-  '本地部署大模型需要什么配置？',
+  '本地部署大模型需要什么硬件配置？',
 ]
 
-const AI_RESPONSES: Record<string, string> = {
-  '目前最强的代码生成模型是什么？': `目前代码生成领域的顶级模型如下：
+// Pollinations AI 免费 API - 无需注册/API Key
+async function callPollinationsAI(messages: { role: string; content: string }[]): Promise<string> {
+  const systemPrompt = `你是 AI Hub 的专属助手，专注于 AI 领域的知识问答。你对以下领域有深入了解：
+- 各大 AI 公司和最新模型（OpenAI、Anthropic、Google DeepMind、DeepSeek、Meta、xAI 等）
+- AI 工具的使用场景和最佳实践（ChatGPT、Claude、Gemini、Midjourney、Cursor 等）
+- AI Agent、RAG、Prompt Engineering 等技术概念
+- AI 行业动态和发展趋势
 
-**🥇 Claude 3.5 Sonnet（最推荐）**
-Anthropic 的旗舰模型，在 SWE-bench 基准测试中表现最好，擅长理解复杂代码库、修复 Bug、生成高质量测试用例。
+请用中文回答，回答要专业、实用、有条理。适当使用 Markdown 格式（**加粗**、列表等）让内容更清晰。`
 
-**🥈 GPT-4o**
-OpenAI 旗舰，代码补全流畅，多语言支持全面，与 GitHub Copilot 深度集成，适合日常开发工作流。
+  const response = await fetch('https://text.pollinations.ai/openai', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: 'openai-large',
+      messages: [
+        { role: 'system', content: systemPrompt },
+        ...messages,
+      ],
+      temperature: 0.7,
+      max_tokens: 1000,
+    }),
+  })
 
-**🥉 DeepSeek-Coder V2**
-开源替代中性价比最高，算法题和数学相关代码表现出色，API 价格仅为 GPT-4 的约 1/10。
-
-**实用建议：**
-- **IDE 集成**：首选 Cursor（Claude 驱动）或 GitHub Copilot
-- **代码审查**：Claude 长文本优势明显
-- **算法/竞赛**：DeepSeek-Coder 或 o1-mini
-- **预算有限**：DeepSeek API 极具性价比`,
-
-  '如何选择适合我的 AI 绘图工具？': `根据不同需求选择：
-
-**🎨 追求最高艺术质量 → Midjourney V6**
-风格独特、细节丰富，是设计师和艺术家的首选。$10/月起，仅支持 Discord。
-
-**⚡ 需要快速迭代 → DALL-E 3（集成在 ChatGPT）**
-上手简单，自然语言描述准确，适合非设计师，免费账户有一定额度。
-
-**🔧 需要精准控制 → Stable Diffusion + ControlNet**
-开源免费可本地运行，支持 LoRA 微调，有 ComfyUI 等强大界面，适合高级用户。
-
-**🇨🇳 国产推荐 → 即梦 AI（字节）/ 文心一格（百度）**
-中文提示词理解更好，内容审核适合国内使用场景。
-
-**选择核心参考点：**
-- 是否需要本地运行（隐私/成本）？→ Stable Diffusion
-- 是否重视艺术风格？→ Midjourney  
-- 是否要快速出图？→ DALL-E 3`,
-
-  'GPT-4o 和 Claude 3.5 有什么区别？': `两款都是顶级 LLM，各有侧重：
-
-| 对比维度 | GPT-4o | Claude 3.5 Sonnet |
-|---------|--------|-------------------|
-| **最擅长** | 多模态、通用任务 | 写作、代码、分析 |
-| **上下文窗口** | 128K Token | 200K Token |
-| **语音支持** | ✅ 原生实时语音 | ❌ 无 |
-| **图像生成** | ✅ 集成 DALL-E | ❌ 无 |
-| **代码能力** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **写作风格** | 直接清晰 | 更具文学性 |
-| **安全过滤** | 中等 | 较严格 |
-| **价格(API)** | $5/百万Token | $3/百万Token |
-
-**推荐使用场景：**
-- **选 GPT-4o**：需要语音对话、图像生成、日常多模态任务
-- **选 Claude 3.5**：长文档分析、专业写作、复杂代码项目、成本敏感场景`,
+  if (!response.ok) throw new Error(`API 请求失败: ${response.status}`)
+  const data = await response.json()
+  return data.choices?.[0]?.message?.content || '抱歉，暂时无法获取回答，请稍后再试。'
 }
 
-function generateResponse(question: string): string {
-  // Check for predefined answers
-  for (const [key, value] of Object.entries(AI_RESPONSES)) {
-    if (question.includes(key.slice(0, 10))) return value
-  }
+// 简单 Markdown 渲染
+function renderMarkdown(text: string) {
+  const lines = text.split('\n')
+  const elements: JSX.Element[] = []
+  let i = 0
 
-  // Generic AI-themed response
-  const responses = [
-    `关于"${question}"，这是一个很好的问题！\n\n作为 AI Hub 内置助手，我基于当前 AI 行业知识库为您分析：\n\n**核心要点：**\n1. 目前该领域正处于快速发展阶段，建议关注 OpenAI、Anthropic、Google DeepMind 三大主力玩家的最新动态\n2. 实际应用中，选择工具时需平衡**能力、成本、隐私**三个维度\n3. 建议订阅 AI 行业 Newsletter（如 The Batch、Import AI）保持信息更新\n\n**相关推荐工具：**\n- 通用问答：ChatGPT、Claude、Gemini 三选一\n- 深度分析：Perplexity AI 附带引用来源\n- 技术实现：根据具体场景在工具库中筛选\n\n如需了解更具体的场景建议，请在 **AI 工具库** 页面按分类浏览，每个工具都标注了擅长领域！`,
-    `这是一个在 AI 领域很值得探讨的话题。\n\n**简要分析：**\n\n随着 2025 年各大模型厂商的激烈竞争，AI 能力边界正在快速扩展。关于您的问题，有几个关键视角值得关注：\n\n🔹 **技术层面**：大模型的核心能力差距在缩小，但在特定垂直领域仍有明显分化\n\n🔹 **应用层面**：选择 AI 工具的关键是匹配使用场景，而非盲目追求"最强"\n\n🔹 **趋势方向**：多模态融合、Agent 自主化、本地化部署是 2025 年三大主线\n\n建议您在 **AI 动态** 页面查看最新资讯，或在 **AI 工具库** 中按需求场景筛选工具。`,
-  ]
-  return responses[Math.floor(Math.random() * responses.length)]
+  while (i < lines.length) {
+    const line = lines[i]
+
+    if (line.startsWith('### ')) {
+      elements.push(<h3 key={i} className="font-bold text-sm mt-3 mb-1 text-foreground">{line.slice(4)}</h3>)
+    } else if (line.startsWith('## ')) {
+      elements.push(<h2 key={i} className="font-bold text-base mt-3 mb-1 text-foreground">{line.slice(3)}</h2>)
+    } else if (line.startsWith('# ')) {
+      elements.push(<h1 key={i} className="font-bold text-lg mt-2 mb-1 text-foreground">{line.slice(2)}</h1>)
+    } else if (line.match(/^[-*] /)) {
+      elements.push(
+        <div key={i} className="flex gap-2 my-0.5 ml-1">
+          <span className="text-primary shrink-0 mt-0.5">·</span>
+          <span>{formatInline(line.slice(2))}</span>
+        </div>
+      )
+    } else if (line.match(/^\d+\. /)) {
+      const num = line.match(/^(\d+)\. /)?.[1]
+      elements.push(
+        <div key={i} className="flex gap-2 my-0.5 ml-1">
+          <span className="text-primary shrink-0 font-mono text-xs mt-0.5">{num}.</span>
+          <span>{formatInline(line.replace(/^\d+\. /, ''))}</span>
+        </div>
+      )
+    } else if (line.startsWith('> ')) {
+      elements.push(
+        <div key={i} className="border-l-2 border-primary/40 pl-3 my-1 text-muted-foreground italic text-xs">
+          {line.slice(2)}
+        </div>
+      )
+    } else if (line.startsWith('---') || line.startsWith('===')) {
+      elements.push(<hr key={i} className="border-border my-2" />)
+    } else if (line === '') {
+      elements.push(<div key={i} className="h-1.5" />)
+    } else {
+      elements.push(<p key={i} className="my-0.5 leading-relaxed">{formatInline(line)}</p>)
+    }
+    i++
+  }
+  return elements
+}
+
+function formatInline(text: string): (string | JSX.Element)[] {
+  // Handle **bold**, *italic*, `code`
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/)
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>
+    }
+    if (part.startsWith('*') && part.endsWith('*')) {
+      return <em key={i} className="italic">{part.slice(1, -1)}</em>
+    }
+    if (part.startsWith('`') && part.endsWith('`')) {
+      return <code key={i} className="code-block">{part.slice(1, -1)}</code>
+    }
+    return part
+  })
 }
 
 function MessageBubble({ message }: { message: Message }) {
@@ -98,70 +123,21 @@ function MessageBubble({ message }: { message: Message }) {
     setTimeout(() => setCopied(false), 2000)
   }
 
-  // Simple markdown-like rendering
-  const renderContent = (text: string) => {
-    return text.split('\n').map((line, i) => {
-      if (line.startsWith('**') && line.endsWith('**')) {
-        return <p key={i} className="font-semibold text-foreground my-1">{line.slice(2, -2)}</p>
-      }
-      if (line.startsWith('# ')) {
-        return <h2 key={i} className="font-bold text-base my-2">{line.slice(2)}</h2>
-      }
-      if (line.startsWith('## ')) {
-        return <h3 key={i} className="font-semibold text-sm my-1.5">{line.slice(3)}</h3>
-      }
-      if (line.startsWith('- ') || line.startsWith('• ')) {
-        return (
-          <div key={i} className="flex gap-2 my-0.5">
-            <span className="text-primary mt-1 shrink-0">·</span>
-            <span>{line.slice(2).replace(/\*\*(.*?)\*\*/g, '$1')}</span>
-          </div>
-        )
-      }
-      if (line.startsWith('🔹') || line.startsWith('🥇') || line.startsWith('🥈') || line.startsWith('🥉') || line.startsWith('🎨') || line.startsWith('⚡') || line.startsWith('🔧') || line.startsWith('🇨🇳')) {
-        return <p key={i} className="my-1">{formatInline(line)}</p>
-      }
-      if (line.startsWith('|')) {
-        return <p key={i} className="font-mono text-xs my-0.5 text-muted-foreground">{line}</p>
-      }
-      if (line === '') return <div key={i} className="h-1" />
-      return <p key={i} className="my-0.5 leading-relaxed">{formatInline(line)}</p>
-    })
-  }
-
-  const formatInline = (text: string) => {
-    const parts = text.split(/\*\*(.*?)\*\*/)
-    return parts.map((part, i) =>
-      i % 2 === 1
-        ? <strong key={i} className="font-semibold text-foreground">{part}</strong>
-        : part
-    )
-  }
-
   return (
-    <div className={cn("flex gap-3 animate-fade-in", isAI ? "flex-row" : "flex-row-reverse")}>
-      {/* Avatar */}
+    <div className={cn('flex gap-3 animate-fade-in', isAI ? 'flex-row' : 'flex-row-reverse')}>
       <div className={cn(
-        "w-8 h-8 rounded-xl flex items-center justify-center shrink-0 mt-1",
-        isAI
-          ? "bg-gradient-primary shadow-glow-sm"
-          : "bg-surface-2 border border-border"
+        'w-8 h-8 rounded-xl flex items-center justify-center shrink-0 mt-1',
+        isAI ? 'bg-gradient-primary shadow-glow-sm' : 'bg-surface-2 border border-border'
       )}>
-        {isAI
-          ? <Bot className="w-4 h-4 text-white" />
-          : <User className="w-4 h-4 text-muted-foreground" />
-        }
+        {isAI ? <Bot className="w-4 h-4 text-white" /> : <User className="w-4 h-4 text-muted-foreground" />}
       </div>
 
-      {/* Bubble */}
       <div className={cn(
-        "max-w-[85%] rounded-2xl px-4 py-3 text-sm",
-        isAI
-          ? "glass-card text-foreground rounded-tl-sm"
-          : "bg-primary text-white rounded-tr-sm"
+        'max-w-[85%] rounded-2xl px-4 py-3 text-sm',
+        isAI ? 'glass-card text-foreground rounded-tl-sm' : 'bg-primary text-white rounded-tr-sm'
       )}>
-        <div className={cn("leading-relaxed", isAI ? "text-sm" : "text-sm")}>
-          {isAI ? renderContent(message.content) : message.content}
+        <div className="leading-relaxed">
+          {isAI ? renderMarkdown(message.content) : message.content}
         </div>
 
         {isAI && (
@@ -183,26 +159,63 @@ function MessageBubble({ message }: { message: Message }) {
   )
 }
 
+function ThinkingBubble() {
+  return (
+    <div className="flex gap-3 animate-fade-in">
+      <div className="w-8 h-8 rounded-xl bg-gradient-primary shadow-glow-sm flex items-center justify-center shrink-0">
+        <Bot className="w-4 h-4 text-white" />
+      </div>
+      <div className="glass-card rounded-2xl rounded-tl-sm px-4 py-3">
+        <div className="flex items-center gap-2">
+          <div className="flex gap-1">
+            {[0, 1, 2].map(i => (
+              <div
+                key={i}
+                className="w-2 h-2 rounded-full bg-primary animate-bounce"
+                style={{ animationDelay: `${i * 150}ms` }}
+              />
+            ))}
+          </div>
+          <span className="text-xs text-muted-foreground">AI 思考中...</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function ChatPage() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '0',
       role: 'assistant',
-      content: `你好！我是 **AI Hub 助手**，专注于 AI 领域的知识问答。\n\n我可以帮你：\n- 比较不同 AI 模型的优缺点\n- 推荐适合你场景的 AI 工具\n- 解答 AI 技术和行业趋势问题\n- 提供 Prompt 工程和最佳实践建议\n\n试试下方的快捷问题，或者直接输入你想了解的内容！`,
+      content: `你好！我是 **AI Hub 助手**，由 Pollinations AI 驱动，专注于 AI 领域的知识问答。
+
+我可以帮你：
+- 比较不同 AI 模型的优缺点和适用场景
+- 推荐适合你需求的 AI 工具
+- 解答 AI 技术概念和行业趋势
+- 提供 Prompt 工程和最佳实践建议
+- 回答任何关于 AI 的问题
+
+试试下方的快捷问题，或者直接输入你想了解的内容！`,
       timestamp: new Date(),
     }
   ])
   const [input, setInput] = useState('')
   const [isThinking, setIsThinking] = useState(false)
+  const [showQuick, setShowQuick] = useState(true)
+  const [error, setError] = useState('')
   const endRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [messages])
+  }, [messages, isThinking])
 
-  const sendMessage = (text: string) => {
+  const sendMessage = async (text: string) => {
     if (!text.trim() || isThinking) return
+    setShowQuick(false)
+    setError('')
 
     const userMsg: Message = {
       id: Date.now().toString(),
@@ -210,21 +223,33 @@ export default function ChatPage() {
       content: text.trim(),
       timestamp: new Date(),
     }
-    setMessages(prev => [...prev, userMsg])
+    const newMessages = [...messages, userMsg]
+    setMessages(newMessages)
     setInput('')
     setIsThinking(true)
 
-    // Simulate AI thinking delay
-    setTimeout(() => {
+    try {
+      // 构建发送给 API 的历史消息（最近8条）
+      const apiMessages = newMessages.slice(-8).map(m => ({
+        role: m.role,
+        content: m.content,
+      }))
+
+      const reply = await callPollinationsAI(apiMessages)
+
       const aiMsg: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: generateResponse(text.trim()),
+        content: reply,
         timestamp: new Date(),
       }
       setMessages(prev => [...prev, aiMsg])
+    } catch (err) {
+      setError('网络请求失败，请检查网络连接后重试')
+      console.error(err)
+    } finally {
       setIsThinking(false)
-    }, 1200 + Math.random() * 800)
+    }
   }
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -238,10 +263,21 @@ export default function ChatPage() {
     setMessages([{
       id: '0',
       role: 'assistant',
-      content: `你好！我是 **AI Hub 助手**，专注于 AI 领域的知识问答。\n\n我可以帮你：\n- 比较不同 AI 模型的优缺点\n- 推荐适合你场景的 AI 工具\n- 解答 AI 技术和行业趋势问题\n- 提供 Prompt 工程和最佳实践建议\n\n试试下方的快捷问题，或者直接输入你想了解的内容！`,
+      content: `你好！我是 **AI Hub 助手**，由 Pollinations AI 驱动，专注于 AI 领域的知识问答。
+
+我可以帮你：
+- 比较不同 AI 模型的优缺点和适用场景
+- 推荐适合你需求的 AI 工具
+- 解答 AI 技术概念和行业趋势
+- 提供 Prompt 工程和最佳实践建议
+- 回答任何关于 AI 的问题
+
+试试下方的快捷问题，或者直接输入你想了解的内容！`,
       timestamp: new Date(),
     }])
     setInput('')
+    setError('')
+    setShowQuick(true)
   }
 
   return (
@@ -252,12 +288,17 @@ export default function ChatPage() {
           <div className="flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-primary" />
             <h1 className="text-2xl font-bold text-foreground">AI 助手</h1>
+            <span className="text-xs bg-accent-emerald/15 text-accent-emerald border border-accent-emerald/30 px-2 py-0.5 rounded-full font-medium">
+              免费
+            </span>
           </div>
-          <p className="text-sm text-muted-foreground mt-0.5">专注 AI 领域知识的智能问答助手</p>
+          <p className="text-sm text-muted-foreground mt-0.5">
+            由 Pollinations AI 驱动 · 无需注册 · 专注 AI 领域问答
+          </p>
         </div>
         <Button variant="outline" size="sm" onClick={handleReset} className="gap-1.5">
           <RotateCcw className="w-3.5 h-3.5" />
-          清空对话
+          清空
         </Button>
       </div>
 
@@ -266,27 +307,17 @@ export default function ChatPage() {
         {messages.map(msg => (
           <MessageBubble key={msg.id} message={msg} />
         ))}
-
-        {/* Thinking indicator */}
-        {isThinking && (
-          <div className="flex gap-3 animate-fade-in">
-            <div className="w-8 h-8 rounded-xl bg-gradient-primary shadow-glow-sm flex items-center justify-center shrink-0">
-              <Bot className="w-4 h-4 text-white" />
-            </div>
-            <div className="glass-card rounded-2xl rounded-tl-sm px-4 py-3">
-              <div className="flex items-center gap-1.5">
-                <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: '0ms' }} />
-                <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: '150ms' }} />
-                <div className="w-2 h-2 rounded-full bg-primary animate-bounce" style={{ animationDelay: '300ms' }} />
-              </div>
-            </div>
+        {isThinking && <ThinkingBubble />}
+        {error && (
+          <div className="glass-card rounded-xl p-3 border-accent-rose/30 bg-accent-rose/5">
+            <p className="text-sm text-accent-rose">{error}</p>
           </div>
         )}
         <div ref={endRef} />
       </div>
 
       {/* Quick questions */}
-      {messages.length <= 1 && (
+      {showQuick && (
         <div className="shrink-0 mb-3">
           <p className="text-xs text-muted-foreground mb-2">快捷问题：</p>
           <div className="flex flex-wrap gap-2">
@@ -326,7 +357,7 @@ export default function ChatPage() {
           </Button>
         </div>
         <p className="text-xs text-muted-foreground mt-2 px-1">
-          AI 回答仅供参考，重要决策请结合多方信息源验证
+          由 Pollinations AI 免费提供 · AI 回答仅供参考
         </p>
       </div>
     </div>
