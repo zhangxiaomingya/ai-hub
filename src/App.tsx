@@ -88,7 +88,7 @@ function HeroBanner({ activeTab }: { activeTab: Tab }) {
   return (
     <div className="relative rounded-2xl overflow-hidden mb-6 h-36 sm:h-44">
       <img
-        src="/images/hero.png"
+        src={`${import.meta.env.BASE_URL}images/hero.png`}
         alt="AI Hub 科技背景"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
