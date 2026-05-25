@@ -1,6 +1,30 @@
 {
-  "updatedAt": "2026-05-24T09:09:34.927Z",
+  "updatedAt": "2026-05-25T12:49:57.931Z",
   "items": [
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Everyone is navigating AI security in real time &#8212; even Google",
+      "summary": "We're in the transition period -- all of us.",
+      "url": "https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/",
+      "date": "2026-05-24",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "I tried Amazon&#8217;s Bee wearable and am both intrigued and slightly creeped out",
+      "summary": "Like other AI wearables, Amazon's Bee offers an odd combination of convenience and privacy anxiety.",
+      "url": "https://techcrunch.com/2026/05/24/i-tried-amazons-bee-wearable-and-am-both-intrigued-and-slightly-creeped-out/",
+      "date": "2026-05-24",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
     {
       "id": "aHR0cHM6Ly90",
       "title": "Ferrari is using IBM&#8217;s AI to create F1 superfans",
@@ -21,7 +45,7 @@
       "date": "2026-05-23",
       "category": "news",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -33,7 +57,7 @@
       "date": "2026-05-22",
       "category": "news",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -42,30 +66,6 @@
       "title": "Google goes for the glitter with disco-ball icons: &#8216;Are y&#8217;all sure you still want this?&#8217;",
       "summary": "You can now disco ball-ify your entire Pixel home screen, says Google.",
       "url": "https://techcrunch.com/2026/05/22/google-goes-for-the-glitter-with-disco-ball-icons-are-yall-sure-you-still-want-this/",
-      "date": "2026-05-22",
-      "category": "news",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "How VCs and founders use inflated ‘ARR’ to crown AI startups",
-      "summary": "Some AI startups are stretching traditional revenue metrics when talking about progress publicly. And their investors are fully aware.",
-      "url": "https://techcrunch.com/2026/05/22/how-vcs-and-founders-use-inflated-arr-to-kingmake-ai-startups/",
-      "date": "2026-05-22",
-      "category": "news",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "Elon Musk can&#8217;t hear you over the sound of his $1.75 trillion IPO",
-      "summary": "The SpaceX S-1 is finally here, and the story it tells goes&#160;way further&#160;than rockets. The filing runs to 36 pages of risk factors alone, and the numbers inside match the ambition: a&#160;$28",
-      "url": "https://techcrunch.com/podcast/elon-musk-cant-hear-you-over-the-sound-of-his-1-75-trillion-ipo/",
       "date": "2026-05-22",
       "category": "news",
       "source": "TechCrunch AI",
