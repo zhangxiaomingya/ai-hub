@@ -1,6 +1,30 @@
 {
-  "updatedAt": "2026-06-28T02:12:40.474Z",
+  "updatedAt": "2026-06-29T02:12:25.830Z",
   "items": [
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Ford rehires ‘gray beard’ engineers after AI falls short",
+      "summary": "\"Mistakenly we thought that by just introducing artificial intelligence ... that would produce a high-quality product.”",
+      "url": "https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/",
+      "date": "2026-06-28",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Why Wall Street thinks US memory maker Micron is the next Nvidia",
+      "summary": "Eager to find more public AI-related companies that may do as well as Nvidia, Wall Street investors think they've found a winner with Micron.",
+      "url": "https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/",
+      "date": "2026-06-28",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
     {
       "id": "aHR0cHM6Ly90",
       "title": "SoftBank’s CEO isn’t the only one with questions about Elon Musk&#8217;s orbital data center hype",
@@ -21,7 +45,7 @@
       "date": "2026-06-27",
       "category": "news",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -33,7 +57,7 @@
       "date": "2026-06-27",
       "category": "news",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -43,30 +67,6 @@
       "summary": "New models are launching in Asia that promise Mythos-like capabilities without fear of an export ban. U.S. AI labs may never recover this enormous market.",
       "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/",
       "date": "2026-06-27",
-      "category": "model",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "Trump Admin releases Anthropic Mythos to be used by more than 100 US companies, agencies",
-      "summary": "Over 100 companies and government agencies are reportedly authorized to use Mythos 5, including their non-American employees.",
-      "url": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/",
-      "date": "2026-06-27",
-      "category": "product",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn’t be the norm",
-      "summary": "“We don’t believe this kind of government access process should become the long-term default,” says OpenAI. “It keeps the best tools from users, developers, enterprises, cyber defenders, and global pa",
-      "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
-      "date": "2026-06-26",
       "category": "model",
       "source": "TechCrunch AI",
       "isHot": false,
