@@ -1,6 +1,30 @@
 {
-  "updatedAt": "2026-08-30T02:07:58.693Z",
+  "updatedAt": "2026-08-31T02:03:37.071Z",
   "items": [
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Musk&#8217;s faster path to more gas turbines comes with pollution problem",
+      "summary": "Elon Musk says a secretive new SpaceX foundry will let him cast his own turbine blades and get gas power online 18 months faster than anyone else — but it's a bet on a fuel source that's already trigg",
+      "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+      "date": "2026-08-30",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Caterpillar is bringing to AI deployment what it learned from automating mining",
+      "summary": "Caterpillar has spent decades putting autonomous machines to work at remote mining sites. It's now bringing that experience to AI deployment.",
+      "url": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/",
+      "date": "2026-08-30",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
     {
       "id": "aHR0cHM6Ly90",
       "title": "Sony Music, Warner sue Anthropic, alleging a &#8220;brazen campaign&#8221; of intellectual property theft",
@@ -21,7 +45,7 @@
       "date": "2026-08-29",
       "category": "company",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -33,7 +57,7 @@
       "date": "2026-08-29",
       "category": "news",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -44,30 +68,6 @@
       "url": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
       "date": "2026-08-28",
       "category": "news",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "An Anthropic researcher just gave us a peek at self-improving AI",
-      "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
-      "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
-      "date": "2026-08-28",
-      "category": "research",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "Open-weight AI companies are the Valley&#8217;s hottest acquisition targets",
-      "summary": "There's a lot of capital pouring into the business of giving models away.",
-      "url": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/",
-      "date": "2026-08-28",
-      "category": "company",
       "source": "TechCrunch AI",
       "isHot": false,
       "company": "TechCrunch",
