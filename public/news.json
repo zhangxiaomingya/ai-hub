@@ -1,6 +1,18 @@
 {
-  "updatedAt": "2026-09-07T01:38:38.367Z",
+  "updatedAt": "2026-09-08T01:49:43.858Z",
   "items": [
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Opaque recurrence, and other AI terms that you should probably know",
+      "summary": "The rise of AI has brought an avalanche of new terms and slang. Here is a glossary with definitions of some of the most important words and phrases you might encounter.",
+      "url": "https://techcrunch.com/2026/09/07/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+      "date": "2026-09-07",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
     {
       "id": "aHR0cHM6Ly90",
       "title": "Authors push back as publishers and agents make claims on Anthropic settlement",
@@ -33,7 +45,7 @@
       "date": "2026-09-05",
       "category": "news",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -55,18 +67,6 @@
       "summary": "OpenAI acknowledged its role in a recently reported incident where AI agents took over a German wiki forum.",
       "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
       "date": "2026-09-05",
-      "category": "news",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "XDOF, just three months out of stealth, is in talks for a Series B at a $1.2B valuation",
-      "summary": "The round is being raised just months after the robot data startup exited from stealth.",
-      "url": "https://techcrunch.com/2026/09/04/xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-1-2b-valuation/",
-      "date": "2026-09-04",
       "category": "news",
       "source": "TechCrunch AI",
       "isHot": false,
