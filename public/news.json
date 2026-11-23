@@ -1,6 +1,42 @@
 {
-  "updatedAt": "2026-11-22T03:51:27.997Z",
+  "updatedAt": "2026-11-23T04:29:46.274Z",
   "items": [
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+      "summary": "Three significant backers share what gave them conviction to bet billions on Anthropic.",
+      "url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+      "date": "2026-11-23",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "OpenAI’s chief scientist has thoughts on how to limit AI development",
+      "summary": "To establish a speed limit on AI development, you need to agree on how to measure speed.",
+      "url": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
+      "date": "2026-11-22",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Why data centers are at the center of the Big Tech backlash",
+      "summary": "Journalist Paris Marx unpacks his new book \"Hyperscale.\"",
+      "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
+      "date": "2026-11-22",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
     {
       "id": "aHR0cHM6Ly90",
       "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
@@ -9,7 +45,7 @@
       "date": "2026-11-21",
       "category": "news",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -21,7 +57,7 @@
       "date": "2026-11-21",
       "category": "news",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -31,42 +67,6 @@
       "summary": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
       "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
       "date": "2026-11-21",
-      "category": "news",
-      "source": "TechCrunch AI",
-      "isHot": true,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
-      "summary": "An actor has licensed his face to a microdrama startup — in a trend that's already popular in China. Experts question the long-term consequences if this becomes a trend in Hollywood, too.",
-      "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
-      "date": "2026-11-21",
-      "category": "news",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "Daniel Ek backs AI researcher&#8217;s fusion power startup. Here&#8217;s what they&#8217;re building.",
-      "summary": "Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. Here's what the startup is building.",
-      "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
-      "date": "2026-11-20",
-      "category": "research",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
-      "summary": "Mathematicians are having their minds blown by the latest AI-driven result — and there's a competing human solution, too.",
-      "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
-      "date": "2026-11-20",
       "category": "news",
       "source": "TechCrunch AI",
       "isHot": false,
