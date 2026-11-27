@@ -1,6 +1,30 @@
 {
-  "updatedAt": "2026-11-26T05:46:42.926Z",
+  "updatedAt": "2026-11-27T05:41:10.571Z",
   "items": [
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Nvidia hits pause on chip shipments to Southeast Asia",
+      "summary": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U.S. tightens its push to keep AI chips out of China.",
+      "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
+      "date": "2026-11-26",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
+    {
+      "id": "aHR0cHM6Ly90",
+      "title": "Grand Theft Auto VI proves why efficiency isn&#8217;t a virtue",
+      "summary": "On the same day that Anthropic entered the public market, a painstakingly human video game became one of most successful entertainment launches of all time.",
+      "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
+      "date": "2026-11-26",
+      "category": "news",
+      "source": "TechCrunch AI",
+      "isHot": true,
+      "company": "TechCrunch",
+      "companyColor": "#00A86B"
+    },
     {
       "id": "aHR0cHM6Ly90",
       "title": "S&#038;P considers Nvidia credit downgrade over governance and &#8216;key man&#8217; risks",
@@ -21,7 +45,7 @@
       "date": "2026-11-25",
       "category": "model",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -33,7 +57,7 @@
       "date": "2026-11-25",
       "category": "news",
       "source": "TechCrunch AI",
-      "isHot": true,
+      "isHot": false,
       "company": "TechCrunch",
       "companyColor": "#00A86B"
     },
@@ -42,30 +66,6 @@
       "title": "Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’",
       "summary": "Anthropic CEO Dario Amodei pushes back against rivals’ accusations that he favors surrendering human agency to AI, even as leading AI companies increasingly automate their own research and model devel",
       "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
-      "date": "2026-11-25",
-      "category": "news",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "Want to buy your kid an AI toy this Christmas? Not in New York",
-      "summary": "New York has banned AI chatbot toys for five years as new research from Common Sense Media reveals troubling safety failures, including exposure to inappropriate content and risks to emotional develop",
-      "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
-      "date": "2026-11-25",
-      "category": "news",
-      "source": "TechCrunch AI",
-      "isHot": false,
-      "company": "TechCrunch",
-      "companyColor": "#00A86B"
-    },
-    {
-      "id": "aHR0cHM6Ly90",
-      "title": "Character.AI’s plan to auction off users’ private chats challenged by state AGs",
-      "summary": "The proposed Character.ai bankruptcy sale includes sensitive personal data from more than 21 million U.S. accounts, including 2.1 million registered to minors, the state AGs said.",
-      "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
       "date": "2026-11-25",
       "category": "news",
       "source": "TechCrunch AI",
